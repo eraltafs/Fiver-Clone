@@ -3,9 +3,9 @@
 }
 
 body {
-  background-color: pink;
-  width: 100%;
-  margin: auto;
+  width: 100vw;
+  margin: 0px;
+  padding: 0px;
 }
 
 li {
@@ -32,8 +32,9 @@ ul {
 
 #navigations {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   top: 0;
+  z-index: 1;
   /* background-color: white; */
 }
 
@@ -43,7 +44,7 @@ ul {
   align-items: center;
   justify-content: space-between;
   height: 60px;
-  width: 90%;
+  width: 90vw;
   padding: 0px 5%;
 }
 
@@ -59,7 +60,7 @@ ul {
   align-items: center;
 }
 
-input[type="search"] {
+#navbarTop input[type="search"] {
   height: fit-content;
   font-size: 13px;
   margin: 0px;
@@ -98,7 +99,6 @@ ul > a:last-child {
 
 ul > a:last-child:hover {
   background-color: #1dbf73;
-  /* color: white; */
   border: 1px solid #1dbf73;
 }
 
@@ -106,12 +106,8 @@ ul > a:last-child:hover {
   visibility: hidden;
 }
 
-p {
-  margin-top: 80px;
-}
-
 #navbarBottom ul {
-  width: 90%;
+  width: 90vw;
   justify-content: space-between;
 }
 
@@ -144,7 +140,6 @@ hr {
   flex-wrap: wrap;
   row-gap: 3px;
   margin: 0px auto;
-  /* width: 250px; */
 }
 
 .dropdown-content a {
@@ -175,4 +170,209 @@ li.dropdown:nth-child(7) .dropdown-content,
 li.dropdown:nth-child(8) .dropdown-content {
   right: 0;
   left: auto;
+}
+
+.maindiv {
+  height: 95vh;
+  width: 100vw;
+  /* position: absolute; */
+  background-image: url("/images/fiverr-b2b-copywriting-example.png");
+  background-repeat: no-repeat;
+  background-size: 100vw 95vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  animation: slider 15s infinite linear;
+}
+@keyframes slider {
+  0% {
+    background-image: url("/images/bg\ 1.png");
+  }
+  33% {
+    background-image: url("/images/bg\ 2.png");
+  }
+  66% {
+    background-image: url("/images/bg\ 3.jpg");
+  }
+  100% {
+    background-image: url("/images/bg\ 4.png");
+  }
+}
+
+.maindiv > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-left: 10%;
+  color: white;
+}
+
+.maindiv > div:first-child h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+}
+.maindiv > div:first-child h1 > span {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 56px;
+  font-style: italic;
+  font-family: "Kaushan Script", cursive;
+}
+
+.maindiv form {
+  display: grid;
+  grid-template-columns: 1fr 8fr 2fr;
+}
+.maindiv #searchicon {
+  /* width: 50px; */
+  background-color: white;
+  padding: 20px;
+  color: rgb(82, 81, 81);
+  border-radius: 6px 0px 0px 6px;
+}
+.maindiv input {
+  /* border-radius: 50px; */
+  font-size: 16px;
+  border: none;
+  padding: 8px 7px 7px 8px;
+  font-weight: 500;
+}
+
+.maindiv input[type="submit"] {
+  background-color: #1dbf73;
+
+  border-radius: 0px 6px 6px 0px;
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px 12px 24px;
+  cursor: pointer;
+}
+
+.maindiv > div:first-child > div > p > span {
+  width: 100%;
+  border: 1px solid;
+  border-radius: 20px;
+  margin: 0px 15px;
+  padding: 5px 10px;
+
+  line-height: 24px;
+}
+.maindiv p {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#trustedby {
+  color: rgb(181, 182, 186);
+  display: flex;
+  justify-content: center;
+  width: 90vw;
+  height: 80px;
+  gap: 40px;
+  font-size: 10px;
+  align-items: center;
+  background-color: rgb(250, 250, 250);
+}
+#trustedby img {
+  height: 60px;
+}
+#popularprsnlservices {
+  width: 90vw;
+  margin: auto;
+}
+#cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+#cards p,#cards h2 {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  line-height: 5;
+  margin-top: 0px;
+}
+#cards img {
+  width: 100%;
+}
+#featuresbg {
+  background-color: rgb(241, 253, 247);
+  margin-top: 6%;
+}
+#features {
+  display: flex;
+  width: 90vw;
+  margin: auto;
+  padding: 6% 0%;
+}
+#features > div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+}
+#features > div:last-child img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+}
+#marketplace {
+  width: 90%;
+  margin: auto;
+}
+#marketplacecards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+#marketplacecards img {
+  width: 50px;
+}
+#marketplacecards > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-weight: bold;
+
+  width: fit-content;
+}
+
+#fiverbusiness {
+  background-color: rgb(13,8,77);
+  margin-top: 6%;
+}
+#featuresbusiness {
+  display: flex;
+  width: 90vw;
+  margin: auto;
+  color: white;
+  padding: 6% 0%;
+}
+#featuresbusiness > div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+}
+#featuresbusiness > div:last-child img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+}
+#featuresbusiness button{
+    background-color: #1dbf73;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
 }
