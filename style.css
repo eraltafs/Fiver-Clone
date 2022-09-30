@@ -16,11 +16,14 @@ li {
   color: black;
 }
 
-a {
+#navbarTop a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
-
+a{
+  color: #000;
+  text-decoration: none;
+}
 ul {
   display: flex;
   width: 100%;
@@ -29,6 +32,7 @@ ul {
   margin: auto;
   padding: 0px;
 }
+
 
 #navigations {
   position: fixed;
@@ -43,7 +47,7 @@ ul {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
+  height: 80px;
   width: 90vw;
   padding: 0px 5%;
 }
@@ -113,12 +117,17 @@ ul > a:last-child:hover {
 
 #navbarBottom {
   display: none;
-  padding: 10px 0px;
+
 }
 
 hr {
   margin: 0px;
   margin-bottom: 10px;
+}
+
+ul+hr{
+  margin-bottom: 0px;
+  margin-top: 10px;
 }
 
 .dropdown-content {
@@ -286,7 +295,8 @@ li.dropdown:nth-child(8) .dropdown-content {
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
 }
-#cards p,#cards h2 {
+#cards p,
+#cards h2 {
   position: absolute;
   color: white;
   font-weight: bold;
@@ -344,11 +354,12 @@ li.dropdown:nth-child(8) .dropdown-content {
 }
 
 #fiverbusiness {
-  background-color: rgb(13,8,77);
+  background-color: rgb(13, 8, 77);
   margin-top: 6%;
 }
 #featuresbusiness {
   display: flex;
+  justify-content: space-between;
   width: 90vw;
   margin: auto;
   color: white;
@@ -361,6 +372,28 @@ li.dropdown:nth-child(8) .dropdown-content {
 
   width: 50%;
 }
+#featuresbusiness > div:first-child {
+  justify-content: center;
+  align-items: center;
+
+  width: 30%;
+}
+#featuresbusiness p>i{
+  color: rgb(122,125,133);
+  font-weight: thin;
+  margin-right: 3px;
+}
+#featuresbusiness h2>button{
+  background-color: rgb(88,74,255);
+  border-radius: 30px;
+  padding: 6px 12px ;
+  font-size: 10px;
+}
+#featuresbusiness h2{
+  display: flex;
+  align-items: center;
+}
+
 #featuresbusiness > div:last-child img {
   display: flex;
   justify-content: center;
@@ -368,11 +401,328 @@ li.dropdown:nth-child(8) .dropdown-content {
 
   width: 100%;
 }
-#featuresbusiness button{
-    background-color: #1dbf73;
-    color: white;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 8px;
-    font-size: 14px;
+#featuresbusiness button {
+  background-color: #1dbf73;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+iframe {
+  width: 700px;
+  height: 500px;
+}
+
+/* Video */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  margin: auto;
+  width: fit-content;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+#myBtn {
+  width: 100%;
+  cursor: pointer;
+}
+
+#myBtn + i {
+  color: rgb(52, 46, 40);
+  background-color: white;
+
+  font-size: 80px;
+  position: absolute;
+  border-radius: 400px;
+  cursor: pointer;
+}
+
+#feedback {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+#feedback > div:first-child {
+  width: 25%;
+  position: relative;
+  align-items: center;
+}
+#feedback > div:last-child {
+  width: 70%;
+  text-align: left;
+}
+
+#feedback img {
+  width: 100%;
+}
+
+.feedbackmodal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.feedbackmodal-content {
+  margin: auto;
+  width: fit-content;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+#feedbackmyBtn {
+  width: 100%;
+  cursor: pointer;
+}
+
+#feedbackmyBtn + i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(52, 46, 40);
+  background-color: white;
+
+  font-size: 80px;
+  border-radius: 400px;
+  cursor: pointer;
+}
+
+#feedback h5 img {
+  width: 10%;
+  display: block;
+}
+blockquote {
+  padding: 0px;
+  margin-left: 0px;
+}
+#logoMaker {
+  width: 90%;
+  height: 280px;
+  margin: auto;
+  padding: 0px;
+  border: 1px solid;
+  margin-top: 6%;
+  margin-bottom: 6%;
+  background-color: rgb(68, 110, 231);
+  display: flex;
+  justify-content: space-between;
+}
+#logoMaker img {
+  width: 100%;
+  height: 100%;
+}
+#logoMaker > div:first-child {
+  padding-left: 3%;
+  width: 70%;
+  color: white;
+  line-height: 30px;
+}
+#logoMaker > div:last-child {
+  overflow: hidden;
+  width: 200%;
+}
+#logoMaker p + button {
+  background-color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 12px 24px 12px 24px;
+  font-weight: bold;
+  color: blue;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+#logoMaker h1 > i {
+  font-weight: 400;
+}
+#projects {
+  padding: 5% 0%;
+
+  background-color: rgb(245, 245, 245);
+  /* height: fit-content; */
+}
+#projects h1 {
+  margin-left: 5%;
+}
+#projectscards {
+  width: 90%;
+  height: 330px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.user{
+  padding-left: 10px;
+}
+
+#projectscards img {
+  width: 100%;
+  height: 250px;
+}
+#projectscards h5,
+#projectscards p {
+  margin: 0px;
+}
+#projectscards > div {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#guides {
+  width: 90%;
+  margin: auto;
+  margin-top: 6%;
+  margin-bottom: 6%;
+}
+#guides > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#guides > div:first-child a {
+  color: blue;
+}
+#guides > div:last-child {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  line-height: 20px;
+}
+#getsarted {
+  width: 90%;
+  margin: auto;
+  margin-top: 6%;
+  margin-bottom: 6%;
+}
+#getsarted>div {
+  position: absolute;
+  height: 430px;
+  display: flex;
+  align-items: center;
+  color: white;
+  width: 45%;
+}
+#getsarted>div>div{
+  padding: 6%;
+}
+#getsarted h1{
+  font-size: 48px;
+}
+#getsarted button{
+  background-color: #1dbf73;
+  border: none;
+  border-radius: 3px;
+  padding: 12px 24px 12px 24px;
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+  line-height: 16px;
+}
+#footercards{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+#footercards a{
+  display: block;
+  line-height: 30px;
+  
+
+}
+#footercards a:hover{
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  
+
+}
+
+
+#footercards a>p{
+  margin-top: 0px;
+  line-height: 15px;
+}
+#footercards+hr{
+  width: 90%;
+  margin: auto;
+}
+#copyright img{
+  width: 15%;
+}
+#copyright{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+
+}
+#left{
+  display: flex;
+  align-items: center;
+
+  width: 45%;
+}
+#right{
+  display: flex;
+
+  width: 45%;
+  justify-content: space-between;
+
+}
+#social{
+  width: 45%;
+}
+#right i,#right li{
+  font-size: 18px;
+
+}
+#settings{
+  width: 45%;
 }
