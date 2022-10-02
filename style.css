@@ -53,6 +53,7 @@ ul {
 
 #navbarTop img {
   width: 80px;
+  cursor: pointer;
 }
 
 #navbarTop > div:first-child {
