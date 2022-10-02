@@ -20,7 +20,7 @@ li {
   text-decoration: none;
   color: white;
 }
-a{
+a {
   color: #000;
   text-decoration: none;
 }
@@ -32,7 +32,6 @@ ul {
   margin: auto;
   padding: 0px;
 }
-
 
 #navigations {
   position: fixed;
@@ -117,7 +116,6 @@ ul > a:last-child:hover {
 
 #navbarBottom {
   display: none;
-
 }
 
 hr {
@@ -125,7 +123,7 @@ hr {
   margin-bottom: 10px;
 }
 
-ul+hr{
+ul + hr {
   margin-bottom: 0px;
   margin-top: 10px;
 }
@@ -378,18 +376,18 @@ li.dropdown:nth-child(8) .dropdown-content {
 
   width: 30%;
 }
-#featuresbusiness p>i{
-  color: rgb(122,125,133);
+#featuresbusiness p > i {
+  color: rgb(122, 125, 133);
   font-weight: thin;
   margin-right: 3px;
 }
-#featuresbusiness h2>button{
-  background-color: rgb(88,74,255);
+#featuresbusiness h2 > button {
+  background-color: rgb(88, 74, 255);
   border-radius: 30px;
-  padding: 6px 12px ;
+  padding: 6px 12px;
   font-size: 10px;
 }
-#featuresbusiness h2{
+#featuresbusiness h2 {
   display: flex;
   align-items: center;
 }
@@ -599,7 +597,7 @@ blockquote {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
-.user{
+.user {
   padding-left: 10px;
 }
 
@@ -641,7 +639,7 @@ blockquote {
   margin-top: 6%;
   margin-bottom: 6%;
 }
-#getsarted>div {
+#getsarted > div {
   position: absolute;
   height: 430px;
   display: flex;
@@ -649,13 +647,13 @@ blockquote {
   color: white;
   width: 45%;
 }
-#getsarted>div>div{
+#getsarted > div > div {
   padding: 6%;
 }
-#getsarted h1{
+#getsarted h1 {
   font-size: 48px;
 }
-#getsarted button{
+#getsarted button {
   background-color: #1dbf73;
   border: none;
   border-radius: 3px;
@@ -665,64 +663,160 @@ blockquote {
   font-size: 16px;
   line-height: 16px;
 }
-#footercards{
+#footercards {
   width: 90%;
   margin: auto;
   display: flex;
   justify-content: space-between;
 }
-#footercards a{
+#footercards a {
   display: block;
   line-height: 30px;
-  
-
 }
-#footercards a:hover{
+#footercards a:hover {
   text-decoration: underline;
   text-underline-offset: 5px;
-  
-
 }
 
-
-#footercards a>p{
+#footercards a > p {
   margin-top: 0px;
   line-height: 15px;
 }
-#footercards+hr{
+#footercards + hr {
   width: 90%;
   margin: auto;
 }
-#copyright img{
+#copyright img {
   width: 15%;
 }
-#copyright{
+#copyright {
   display: flex;
   justify-content: space-between;
   width: 90%;
   margin: auto;
-
 }
-#left{
+#left {
   display: flex;
   align-items: center;
 
   width: 45%;
 }
-#right{
+#right {
   display: flex;
 
   width: 45%;
   justify-content: space-between;
-
 }
-#social{
+#social {
   width: 45%;
 }
-#right i,#right li{
+#right i,
+#right li {
   font-size: 18px;
-
 }
-#settings{
+#settings {
   width: 45%;
+}
+
+.signInmodal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.signInmodal-content {
+  margin: auto;
+  width: fit-content;
+}
+#signInmyModal #greenbtn {
+  margin-top: 10px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #1dbf73;
+  border: none;
+  color: white;
+  font-weight: bold;
+  width: 80%;
+  border-radius: 5px;
+  /* margin: 10px; */
+}
+#signInmyModal input {
+  display: block;
+  width: 80%;
+
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 12px 24px;
+  margin: 3px 0px;
+}
+#signInmyModal {
+  background-color: white;
+  width: 50%;
+  padding-top: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: max-content;
+  border-radius: 10px;
+}
+#signinconatiner {
+  text-align: center;
+  margin: 10px;
+}
+#signinconatiner h1 + p {
+  background-color: rgb(66, 103, 178);
+  color: white;
+}
+#signinconatiner>p {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.hr-lines{
+  position: relative;
+  max-width: 500px;
+  text-align: center;
+}
+
+.hr-lines:before{
+  content:" ";
+  height: 2px;
+  width: 90px;
+  background: rgb(0, 0, 0);
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.hr-lines:after{
+  content:" ";
+  height: 2px;
+  width: 90px;
+  background: rgb(0, 0, 0);
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+#signinconatiner>div>p{
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+}
+#signinconatiner img{
+  width: 16px;
+height: 16px;
+
 }
