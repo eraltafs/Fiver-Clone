@@ -433,19 +433,6 @@ iframe {
   width: fit-content;
 }
 
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
 #myBtn {
   width: 100%;
   cursor: pointer;
@@ -502,10 +489,14 @@ iframe {
 }
 
 .close {
-  color: #aaaaaa;
+  color: #f02626;
   float: right;
   font-size: 28px;
   font-weight: bold;
+  border: 1px solid ;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .close:hover,
@@ -513,6 +504,7 @@ iframe {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+  border: 1px solid;
 }
 #feedbackmyBtn {
   width: 100%;
@@ -785,7 +777,6 @@ blockquote {
 
 .hr-lines{
   position: relative;
-  max-width: 500px;
   text-align: center;
 }
 

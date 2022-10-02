@@ -8,8 +8,7 @@ navbarBottom = document.querySelector("#navbarBottom");
 
 var modal = document.getElementById("myModal");
 var modal2 = document.getElementById("feedbackmyModal");
-var signinmodal = document.getElementById("signInmyModal")
-
+var signinmodal = document.getElementById("signInmyModal");
 
 var btn = document.getElementById("myBtn");
 var btn2 = document.getElementById("feedbackmyBtn");
@@ -20,6 +19,7 @@ var playbt2 = document.querySelector("#feedbackmyBtn+i");
 
 var span = document.getElementsByClassName("close")[0];
 var span2 = document.getElementsByClassName("close")[1];
+var span3 = document.getElementsByClassName("close")[2];
 
 btn.onclick = function () {
   modal.style.display = "block";
@@ -28,8 +28,8 @@ btn2.onclick = function () {
   modal2.style.display = "block";
 };
 signin.onclick = function (event) {
-    event.preventDefault()
-    signinmodal.style.display="block"
+  event.preventDefault();
+  signinmodal.style.display = "block";
 };
 
 playbt.onclick = function () {
@@ -40,10 +40,14 @@ playbt2.onclick = function () {
 };
 
 span.onclick = function () {
-  modal.style.display = "none";
+  signinmodal.style.display = "none";
 };
 
 span2.onclick = function () {
+  modal.style.display = "none";
+};
+
+span3.onclick = function () {
   modal2.style.display = "none";
 };
 
@@ -53,9 +57,6 @@ window.onclick = function (event) {
   }
   if (event.target == modal2) {
     modal2.style.display = "none";
-  }
-  if(event.target==signinmodal){
-    signinmodal.style.display="none"
   }
 };
 
